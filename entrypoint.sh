@@ -1,5 +1,7 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo ::set-output name=time::$time
+echo "Running JLineup with url $1"
+
+RESULT=$(OPENSSL_CONF=/dev/null java -jar jlineup-cli.jar --url $1)
+
+echo ::set-output name=result::$RESULT

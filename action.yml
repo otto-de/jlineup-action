@@ -1,15 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'JLineup'
+description: 'Runs Jlineup'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  url:  # id of input
+    description: 'Url for making screenshots'
     required: true
-    default: 'World'
+    default: 'https://www.otto.de'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  result: # id of output
+    description: 'The result'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.url }}
