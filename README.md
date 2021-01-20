@@ -6,22 +6,22 @@ See https://github.com/otto-de/jlineup for more information about JLineup.
 
 ## Quickstart:
 
-Put a lineup.json into your project's root directory and add the JLineup action.
+Put a `lineup.json` file into your project's root directory and add the JLineup action.
 
 
 ## Inputs
 
 ### `config`
 
-**Required** The path to your JLineup config file. Default is `"lineup.json"`.
+**Required** The path to your JLineup config file. Default is `'lineup.json'`.
 
 ### `step`
 
-**Required** The step, can be `before` or `after`. Default is `before`.
+**Required** The step, can be `'before'` or `'after'`. Default is `'before'`.
 
 ### `workspace`
 
-**Required** The JLineup working directory. Default is `jlineup_workspace`.
+**Required** The JLineup working directory. Default is `'jlineup_workspace'`.
 
 ## Outputs
 
