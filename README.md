@@ -6,7 +6,7 @@ See https://github.com/otto-de/jlineup for more information about JLineup.
 
 ## Quickstart:
 
-Put a `lineup.json` file into your project's root directory and add the JLineup action.
+Put a `lineup.json` file into your project's root directory and add the JLineup action. More information about the JLineup config can be found here: https://github.com/otto-de/jlineup/blob/master/docs/CONFIGURATION.md
 
 
 ## Inputs
