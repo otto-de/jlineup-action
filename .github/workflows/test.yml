@@ -21,11 +21,11 @@ jobs:
       - name: Get the result from JLineup after step
         run: echo "${{ steps.jlineup_after.outputs.result }}"
       - name: Get the difference sum
-        run: echo "${{ steps.jlineup_after.outputs.difference }}"
+        run: echo ${{ steps.jlineup_after.outputs.difference }}
       - name: Get the success indicator
-        run: echo "${{ steps.jlineup_after.outputs.success }}"
+        run: echo ${{ steps.jlineup_after.outputs.success }}
       - name: Archive JLineup report
         uses: actions/upload-artifact@v2
         with:
           name: JLineup Report
-          path: "${{ steps.jlineup_before.outputs.workspace }}/report"
+          path: ${{ steps.jlineup_before.outputs.workspace }}/report

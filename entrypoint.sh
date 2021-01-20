@@ -7,7 +7,7 @@ RESULT=$(OPENSSL_CONF=/dev/null java -jar /jlineup-cli.jar --config $1 --step $2
 if [ $2 = "after" ]; then
   DIFFERENCE=$(jq -r '.summary."difference-sum"' "${GITHUB_WORKSPACE}/${3}/report/report.json")
   ERROR=$(jq -r .summary.error "${GITHUB_WORKSPACE}/${3}/report/report.json")
-  if [ $ERROR = "true" ]; then
+  if [ "$ERROR" = "true" ]; then
     SUCCESS=false
   else
     SUCCESS=true
@@ -16,5 +16,6 @@ if [ $2 = "after" ]; then
   echo ::set-output name=success::"$SUCCESS"
 fi
 
-echo ::set-output name=result::"$RESULT"
+# shellcheck disable=SC2086
+echo ::set-output name=result::$RESULT
 echo ::set-output name=workspace::"$3"
