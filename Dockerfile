@@ -5,6 +5,7 @@ RUN mkdir -p /usr/share/man/man1
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install -y wget \
+    && apt-get install -y jq \
     && apt-get install -yf default-jre-headless firefox-esr libjpeg-progs \
     #&& wget --no-verbose -O jlineup-web.jar "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=releases&g=de.otto&a=jlineup-web&v=4.2.1&e=jar" \
     && wget --no-verbose -O /jlineup-cli.jar "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=de.otto&a=jlineup-cli&e=jar&v=LATEST" \

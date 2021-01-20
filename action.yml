@@ -1,15 +1,27 @@
 name: 'JLineup'
 description: 'Runs Jlineup'
 inputs:
-  url:  # id of input
-    description: 'Url for making screenshots'
+  config:
+    description: 'path to config file'
     required: true
-    default: 'https://www.otto.de'
+    default: 'lineup.json'
+  step:
+    description: 'before or after'
+    required: true
+    default: 'before'
+  workspace:
+    description: 'working dir for jlineup'
+    required: true
+    default: 'jlineup_workspace'
 outputs:
-  result: # id of output
+  result:
     description: 'The result'
+  workspace:
+    description: 'The workspace folder of JLineup'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.url }}
+    - ${{ inputs.config }}
+    - ${{ inputs.step }}
+    - ${{ inputs.workspace }}
