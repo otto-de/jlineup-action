@@ -1,6 +1,13 @@
 # JLineup GitHub Action
 
-This actions runs JLineup
+This actions runs JLineup. It supports Firefox_Headless, Chrome_Headless and PhantomJS as browser engine.
+
+See https://github.com/otto-de/jlineup for more information about JLineup. 
+
+## Quickstart:
+
+Put a lineup.json into your project's root directory and add the JLineup action.
+
 
 ## Inputs
 
@@ -8,7 +15,7 @@ This actions runs JLineup
 
 **Required** The path to your JLineup config file. Default is `"lineup.json"`.
 
-#### `step`
+### `step`
 
 **Required** The step, can be `before` or `after`. Default is `before`.
 
