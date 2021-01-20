@@ -3,7 +3,6 @@ FROM debian:buster-slim
 
 RUN mkdir -p /usr/share/man/man1
 RUN apt-get update \
-    && apt-get upgrade -y \
     && apt-get install -y wget \
     && apt-get install -y jq \
     && apt-get install -yf default-jre-headless firefox-esr libjpeg-progs \
