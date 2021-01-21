@@ -25,3 +25,6 @@ runs:
     - ${{ inputs.config }}
     - ${{ inputs.step }}
     - ${{ inputs.workspace }}
+branding:
+  icon: 'check-square'  
+  color: 'blue'
