@@ -1,6 +1,6 @@
 # JLineup GitHub Action
 
-This actions runs JLineup. It supports Firefox_Headless, Chrome_Headless and PhantomJS as browser engine.
+This actions runs JLineup. It supports Firefox_Headless and Chrome_Headless as browser engine.
 
 See https://github.com/otto-de/jlineup for more information about JLineup. 
 
