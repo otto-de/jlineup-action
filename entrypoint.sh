@@ -12,10 +12,9 @@ if [ $2 = "after" ]; then
   else
     SUCCESS=true
   fi
-  echo ::set-output name=difference::"$DIFFERENCE"
-  echo ::set-output name=success::"$SUCCESS"
+  echo "difference=$DIFFERENCE" >> $GITHUB_ENV
+  echo "success=$SUCCESS" >> $GITHUB_ENV
 fi
 
-# shellcheck disable=SC2086
-echo ::set-output name=result::$RESULT
-echo ::set-output name=workspace::"$3"
+echo "result=$RESULT" >> $GITHUB_ENV
+echo "workspace=$3" >> $GITHUB_ENV
