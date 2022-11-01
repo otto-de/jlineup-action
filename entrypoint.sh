@@ -16,5 +16,7 @@ if [ $2 = "after" ]; then
   echo "success=$SUCCESS" >> $GITHUB_ENV
 fi
 
-echo "result=$RESULT" >> $GITHUB_ENV
+echo "result<<EOF" >> $GITHUB_ENV
+echo "$RESULT" >> $GITHUB_ENV
+echo "EOF" >> $GITHUB_ENV
 echo "workspace=$3" >> $GITHUB_ENV
