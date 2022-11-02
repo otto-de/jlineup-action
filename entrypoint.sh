@@ -12,11 +12,12 @@ if [ $2 = "after" ]; then
   else
     SUCCESS=true
   fi
-  echo "difference=$DIFFERENCE" >> $GITHUB_ENV
-  echo "success=$SUCCESS" >> $GITHUB_ENV
+  echo "difference=$DIFFERENCE" >> "${GITHUB_OUTPUT}"
+  echo "success=$SUCCESS" >> "${GITHUB_OUTPUT}"
 fi
 
-echo "result<<EOF" >> $GITHUB_ENV
-echo "$RESULT" >> $GITHUB_ENV
-echo "EOF" >> $GITHUB_ENV
-echo "workspace=$3" >> $GITHUB_ENV
+delimiter="$(openssl rand -hex 8)"
+echo "result<<${delimiter}" >> "${GITHUB_OUTPUT}"
+echo "$RESULT" >> "${GITHUB_OUTPUT}"
+echo "${delimiter}" >> "${GITHUB_OUTPUT}"
+echo "workspace=$3" >> "${GITHUB_OUTPUT}"
