@@ -1,3 +1,5 @@
+![OSS Lifecycle](https://img.shields.io/osslifecycle?file_url=https%3A%2F%2Fraw.githubusercontent.com%2Fotto-de%2Fjlineup-action%2Fmain%2FOSSMETADATA)
+
 # JLineup GitHub Action
 
 This actions runs JLineup. It supports Firefox_Headless and Chrome_Headless as browser engine.
