@@ -1,5 +1,5 @@
-# Use bookworm / debian 12
-FROM debian:bookworm-slim
+# Use trixie / debian 13
+FROM debian:trixie-slim
 
 # Update packages
 RUN apt-get update && apt-get -y upgrade
