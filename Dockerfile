@@ -6,8 +6,7 @@ RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y wget jq
 
 # Download JLineup executable
-RUN wget --no-verbose -O jlineup-cli.jar "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=releases&g=de.otto&a=jlineup-cli&v=LATEST&e=jar"
-#RUN wget --no-verbose -O /jlineup-cli.jar "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=de.otto&a=jlineup-cli&e=jar&v=LATEST"
+RUN wget --no-verbose -O jlineup-cli.jar "https://repo1.maven.org/maven2/de/otto/jlineup-cli/4.14.2/jlineup-cli-4.14.2.jar"
 
 # Install Chrome & Firefox
 RUN apt-get install -yf firefox-esr libjpeg-progs \
